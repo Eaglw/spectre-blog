@@ -9,7 +9,9 @@ import spectre from './package/src';
 import node from '@astrojs/node';
 import { spectreDark } from './src/ec-theme';
 
-const {
+import netlify from '@astrojs/netlify';
+
+/* const {
   GISCUS_REPO,
   GISCUS_REPO_ID,
   GISCUS_CATEGORY,
@@ -20,7 +22,7 @@ const {
   GISCUS_EMIT_METADATA,
   GISCUS_LANG
 } = loadEnv(process.env.NODE_ENV!, process.cwd(), "");
-
+ */
 // https://astro.build/config
 const config = defineConfig({
   site: 'https://spectre.louisescher.dev',
@@ -45,7 +47,7 @@ const config = defineConfig({
         projects: {
           title: 'Projects'
         }
-      },
+      }/* ,
       giscus: {
         repository: GISCUS_REPO,
         repositoryId: GISCUS_REPO_ID,
@@ -56,12 +58,10 @@ const config = defineConfig({
         reactionsEnabled: GISCUS_REACTIONS_ENABLED === "true",
         emitMetadata: GISCUS_EMIT_METADATA === "true",
         lang: GISCUS_LANG,
-      }
+      } */
     })
   ],
-  adapter: node({
-    mode: 'standalone'
-  })
+  adapter: netlify()
 });
 
 export default config;

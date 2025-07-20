@@ -32,7 +32,7 @@ const { Content: About } = await render(about!);
 >
 	<div class="layout-grid-left" slot="left">
 		<Card class="flex-col-card">
-			<ImageGlow quality={100} width={80} height={80} src={ProfilePicture} alt="Louis looking out of a window" loading='eager' />
+			<ImageGlow quality={100} width={200} height={200} src={ProfilePicture} alt="Louis looking out of a window" loading='eager' />
 			<h2>{name}</h2>
 			<ul class="overview-list">
 				{quickInfo.map((info) => (
@@ -56,17 +56,17 @@ const { Content: About } = await render(about!);
 				))}
 			</ul>
 		</Card>
-	</div>
-	<div class="layout-grid-right" slot="right">
 		<Card>
 			<div class="header-container">
 				<Icon type='lucide' name="user" width={24} height={24} class='glow-icon' />
-				<h2>About me</h2>
+				<h2>About mario</h2>
 			</div>
 			<div class="prose">
 				<About />
 			</div>
 		</Card>
+	</div>
+	<div class="layout-grid-right" slot="right">
 		<Card>
 			<div class="header-container">
 				<Icon type='lucide' name="rss" width={24} height={24} class='glow-icon' />
@@ -101,7 +101,7 @@ const { Content: About } = await render(about!);
 				))}
 			</div>
 		</Card>
-		<Card>
+		<!-- <Card>
 			<div class="header-container">
 				<Icon type='lucide' name="briefcase-business" width={24} height={24} class='glow-icon' />
 				<h2>Work Experience</h2>
@@ -116,6 +116,6 @@ const { Content: About } = await render(about!);
 					</div>
 				))}
 			</div>
-		</Card>
+		</Card> -->
 	</div>
 </Layout>

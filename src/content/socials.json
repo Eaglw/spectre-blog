@@ -7,5 +7,14 @@
     },
     "text": "GitHub",
     "link": "https://github.com/louisescher/spectre"
+  },
+  {
+    "id": 2,
+    "icon": {
+      "type": "lucide",
+      "name": "rss"
+    },
+    "text": "Resume",
+    "link": "https://daniele-infante-resume.netlify.app/"
   }
 ]
