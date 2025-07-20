@@ -1,0 +1,13 @@
+# netlify.toml
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[build.cache]
+  paths = [
+    "node_modules",
+    ".next/cache" # or dist, or .vite, etc. depending on framework
+  ]
